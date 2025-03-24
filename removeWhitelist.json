@@ -1,0 +1,18 @@
+{
+    "assets": [
+        {
+            "networkName": "optimism",
+            "token": "0x1234567890123456789012345678901234567890",
+            "whitelisted": [
+                "0x1234567890123456789012345678901234567890"
+            ]
+        }
+    ],
+    "networks": [
+        {
+            "name": "optimism",
+            "rpcUrl": "https://optimism.gateway.tenderly.co",
+            "safeAddress": "0xC224bf25Dcc99236F00843c7D8C4194abE8AA94a"
+        }
+    ]
+}
