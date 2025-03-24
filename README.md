@@ -23,7 +23,9 @@
 Run the script with the following command:
 
 ```
-forge script script/RemoveWhitelist.s.sol --ffi -vvvv
+forge script script/RemoveWhitelist.s.sol --ffi
 ```
 
+## SIMULATE
 
+If want to only simulate update the `ONLY_SIMULATE` variable to `true` in the script.

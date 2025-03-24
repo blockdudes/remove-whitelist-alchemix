@@ -11,7 +11,7 @@ interface IAlchemixToken {
     function setLimits(address _bridge, uint256 _mintingLimit, uint256 _burningLimit) external;
 }
 contract RemoveWhitelist is BatchScript {
-    bool ONLY_SIMULATE = true;
+    bool ONLY_SIMULATE = false;
     struct Data {
         Asset[] assets;
         Network[] networks;
@@ -27,6 +27,7 @@ contract RemoveWhitelist is BatchScript {
         address[] whitelisted;
     }
     function run() public {
+        
         Data memory data = getData();
         for (uint256 i = 0; i < data.networks.length; i++) {
             Network memory network = data.networks[i];
@@ -44,11 +45,6 @@ contract RemoveWhitelist is BatchScript {
                         asset.token,
                         0,
                         abi.encodeWithSelector(IAlchemixToken.setWhitelist.selector, whitelisted, false)
-                    );
-                    addToBatch(
-                        asset.token,
-                        0,
-                        abi.encodeWithSelector(IAlchemixToken.pauseMinter.selector, whitelisted, false)
                     );
                     addToBatch(
                         asset.token,

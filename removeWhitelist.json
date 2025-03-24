@@ -32,7 +32,7 @@
         {
             "name": "arbitrum",
             "rpcUrl": "https://arbitrum.gateway.tenderly.co",
-            "safeAddress": "0xC224bf25Dcc99236F00843c7D8C4194abE8AA94a"
+            "safeAddress": "0x7e108711771DfdB10743F016D46d75A9379cA043"
         }
     ]
 }
