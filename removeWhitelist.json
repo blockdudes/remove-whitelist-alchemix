@@ -2,16 +2,36 @@
     "assets": [
         {
             "networkName": "optimism",
-            "token": "0x1234567890123456789012345678901234567890",
+            "token": "0xCB8FA9a76b8e203D8C3797bF438d8FB81Ea3326A",
             "whitelisted": [
-                "0x1234567890123456789012345678901234567890"
+                "0xb2c22A9fb4FC02eb9D1d337655Ce079a04a526C7"
             ]
+        },
+        {
+            "networkName": "optimism",
+            "token": "0x3E29D3A9316dAB217754d13b28646B76607c5f04",
+            "whitelisted": []
+        },
+        {
+            "networkName": "arbitrum",
+            "token": "0xCB8FA9a76b8e203D8C3797bF438d8FB81Ea3326A",
+            "whitelisted": []
+        },
+        {
+            "networkName": "arbitrum",
+            "token": "0x17573150d67d820542EFb24210371545a4868B03",
+            "whitelisted": []
         }
     ],
     "networks": [
         {
             "name": "optimism",
             "rpcUrl": "https://optimism.gateway.tenderly.co",
+            "safeAddress": "0xC224bf25Dcc99236F00843c7D8C4194abE8AA94a"
+        },
+        {
+            "name": "arbitrum",
+            "rpcUrl": "https://arbitrum.gateway.tenderly.co",
             "safeAddress": "0xC224bf25Dcc99236F00843c7D8C4194abE8AA94a"
         }
     ]

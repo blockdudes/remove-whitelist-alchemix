@@ -1,66 +1,29 @@
-## Foundry
+# Whitelist Removal Script
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## Setup
 
-Foundry consists of:
+1. Configure your wallet by creating a `.env` file based on the `.env.example`:
+   ```
+   # For local wallet with private key
+   WALLET_TYPE=local
+   PRIVATE_KEY=your_private_key_without_0x_prefix
+   
+   # For hardware wallet (Ledger)
+   WALLET_TYPE=ledger
+   MNEMONIC_INDEX=0
+   ```
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+2. Update the `removeWhitelist.json` configuration file:
+   - Add the token addresses you want to modify
+   - For each token, specify the addresses to remove from the whitelist
+   - Ensure network information is correctly configured
 
-## Documentation
+## Execution
 
-https://book.getfoundry.sh/
+Run the script with the following command:
 
-## Usage
-
-### Build
-
-```shell
-$ forge build
+```
+forge script script/RemoveWhitelist.s.sol --ffi -vvvv
 ```
 
-### Test
 
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```

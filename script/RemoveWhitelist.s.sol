@@ -11,6 +11,7 @@ interface IAlchemixToken {
     function setLimits(address _bridge, uint256 _mintingLimit, uint256 _burningLimit) external;
 }
 contract RemoveWhitelist is BatchScript {
+    bool ONLY_SIMULATE = true;
     struct Data {
         Asset[] assets;
         Network[] networks;
@@ -58,7 +59,7 @@ contract RemoveWhitelist is BatchScript {
             }
         }
     
-        executeBatch(true);
+        executeBatch(!ONLY_SIMULATE);
     }
     function getData() public view returns (Data memory) {
         string memory root = vm.projectRoot();
